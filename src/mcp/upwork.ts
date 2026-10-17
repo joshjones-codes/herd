@@ -22,9 +22,6 @@ const oauthProvider = new MCPOAuthClientProvider({
     onRedirectToAuthorization: async (url) => {
         console.log("authorize Herd:", url.href)
         execFile("open", [url.href])
-        // console.log(await oauthProvider.discoveryState());
-
-        // console.log(await oauthProvider.codeVerifier());
     },
     storage,
 })
